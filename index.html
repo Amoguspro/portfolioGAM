@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Andrij Kudelko</title>
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1 class="logo">Portfolio — Andrij Kudelko</h1>
+  <div class="header-controls">
+    <button id="dayStyle">Day Mode</button>
+    <button id="nightStyle">Night Mode</button>
+    <button id="devInfo">About the Author</button>
+    <button id="helpToggle">Help</button>
+  </div>
+</header>
+
+<div id="welcomeOverlay" class="overlay">
+  <div class="modal">
+    <h2>Welcome!</h2>
+    <p>We are glad that you visited the portfolio website.</p>
+    <button id="welcome-btn">Enter the website</button>
+  </div>
+</div>
+
+<div id="devOverlay" class="overlay hidden">
+  <div class="modal">
+    <h2>About the Author</h2>
+    <p>Name: Andrij Kudelko</p>
+    <p>Student of Gimnazija Andrija Mohorovicica Rijeka.  
+       The website was created as part of an educational project.</p>
+    <button id="devClose">Close</button>
+  </div>
+</div>
+
+<main>
+
+<section class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="gallery-wrap">
+    <button id="gLeft" class="g-btn">◀</button>
+    <div class="gallery" id="gallery"></div>
+    <button id="gRight" class="g-btn">▶</button>
+  </div>
+
+  <div class="gallery-controls">
+    <button id="gPlay">Start</button>
+    <button id="gPause">Pause</button>
+  </div>
+</section>
+
+<section class="tabs-section">
+  <h2>Information</h2>
+
+  <div class="tabs">
+    <ul class="tab-headers">
+      <li data-tab="tab1" class="active">About the Project</li>
+      <li data-tab="tab2">Services</li>
+      <li data-tab="tab3">Contact</li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="tab1" class="tab active">The project was created for educational purposes at Gimnazija Andrija Mohorovicica Rijeka.</div>
+      <div id="tab2" class="tab">Photography, editing, design.</div>
+      <div id="tab3" class="tab">Email: kharkov815@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<section class="timer-section">
+  <h2>Timer</h2>
+  <div id="timer">00:00:00</div>
+  <button id="timerStart">Start</button>
+  <button id="timerStop">Stop</button>
+  <button id="timerReset">Reset</button>
+</section>
+
+<section class="draggable-section">
+  <h2>Draggable Images</h2>
+  <div id="dragPanel" class="drag-panel"></div>
+</section>
+
+<section class="vk-section">
+  <h2>Virtual Keyboard</h2>
+  <input id="vkInput" placeholder="Enter text...">
+  <div id="virtualKeyboard" class="virtual-keyboard"></div>
+</section>
+
+</main>
+
+<aside id="helpPanel" class="help-panel hidden">
+  <div class="help-header">Assistant <button id="helpClose">✖</button></div>
+  <div id="helpLog" class="help-log"></div>
+  <input id="helpInput" placeholder="Type your message...">
+  <button id="helpSend">Send</button>
+</aside>
+
+<footer class="site-footer">© 2025 — Portfolio.</footer>
+
+<script src="SCRIPTS/script.js"></script>
+</body>
+</html>
